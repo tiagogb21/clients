@@ -9,10 +9,10 @@ Para saber mais sobre nós, acesse: https://predialize.com.br
 # Premissas e Restrições
 
 - Este repositório deve ser baixado (download) e não clonado;
-- Sob hipótese alguma, **não faça fork** do projeto, sob efeito de desclassificação imediata;
-- Sob hipótese alguma, **não faça merge/pull requests**, sob efeito de desclassificação imediata;
+- **Não faça fork** do projeto, sob efeito de desclassificação imediata;
+- **Não faça merge/pull requests**, sob efeito de desclassificação imediata;
 - Você **pode e deve** mexer o quanto quiser na estrutura de pastas e no código já disponibilizado de acordo com o que acredita que seja melhor;
-- Você **não deve** utilizar libs ou frameworks extras (que já não estejam no package.json) a não ser que decida criar um e disponibilize o código junto ao projeto ou que seja destinado a testes automatizados (não obrigatório).
+- Você **não deve** utilizar libs ou frameworks que já não estejam no package.json a não ser que decida criar um ou que seja destinado a testes automatizados (não obrigatório). Em todo caso, disponibilize o código junto ao projeto.
 
 # Sobre a Entrega
 
