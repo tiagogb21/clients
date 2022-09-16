@@ -16,7 +16,7 @@ Para saber mais sobre nós, acesse: https://predialize.com.br
 
 # Sobre a Entrega
 
-Coloque em um repositório público seu após finalizar o teste. Não importa onde (github, gitlab etc), desde que esteja público, e envie o link do seu repositório no corpo do email de resposta ao nosso contato.
+Coloque seu código em um repositório público seu após finalizar o teste. Não importa onde (github, gitlab etc), desde que esteja público, e envie o link do seu repositório no corpo do email de resposta ao nosso contato.
 
 # Próximas Etapas
 
