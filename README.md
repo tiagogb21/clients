@@ -1,4 +1,4 @@
-# Dashboard de Clientes!
+# Dashboard de Clientes
 
 Este desafio faz parte do processo seletivo para desenvolvedores FullStack da **Predialize**. O projeto já possui uma estrutura básica inicial para que você não perca tempo com coisas que não estamos interessados em avaliar.
 
