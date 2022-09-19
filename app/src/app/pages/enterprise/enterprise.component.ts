@@ -29,7 +29,6 @@ export class EnterpriseComponent implements OnInit {
     this.enterpriseService.getAll()
     .subscribe((enterprises) => {
         const getAllEnterprises = enterprises.reduce((acc, curr:any) => {
-          // console.log(curr)
           curr = curr.enterprises.map((item) => ({
             clientName: curr.name,
             id: item._id,
@@ -47,12 +46,22 @@ export class EnterpriseComponent implements OnInit {
   searchEnterprises(name: string): void {
     this.enterpriseService.getByName(name)
       .subscribe(enterprises => {
-        this.enterprises = enterprises;
+        const getAllEnterprises = enterprises.reduce((acc, curr:any) => {
+          curr = curr.enterprises.map((item) => ({
+            clientName: curr.name,
+            id: item._id,
+            image: item.image_src,
+            name: item.name,
+            realties: item.realties,
+          }))
+          acc.push(...curr);
+          return acc;
+        }, []);
+        this.enterprises = getAllEnterprises;
       });
   }
 
   chooseBySearchChange(search: string): void {
-    console.log(1);
     search ? this.searchEnterprises(search) : this.getEnterprises();
   }
 }
