@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.client__container-top {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(240, 240, 240);
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.client__container-top p {
+  display: flex;
+  gap: 5px;
+}
+
+.client__container-main {
+  padding: 30px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+
+  background: rgb(240, 240, 240);
+}
+
+.client__container-main h1 {
+  width: 60%;
+  text-align: center;
+  color: rgb(63, 81, 181);
+}
+
+.client__box-info {
+  width: 200px;
+
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 10px;
+  padding: 30px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  background: #ffffff;
+}
+
+.client__box-info p:first-child {
+  width: 80%;
+  text-align: right;
+  font-weight: 600;
+  margin: 0;
+}
+
+.client__box-info h3 {
+  width: 80%;
+  text-align: center;
+  margin: 0;
+  color:rgb(63, 81, 181);
+}
+
+.client__box-info img {
+  width: 150px;
+}
+
+.client__box-info p {
+  width: 80%;
+  margin: 0;
+}
+
+.client__box-info p span {
+  font-weight: 600;
+}
+
+.btn-redirect {
+  width: 60%;
+  background:rgb(63, 81, 181);
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+  .client__container-top {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .client__container-main {
+    display: grid;
+    grid-template-columns: repeat(2, calc(100%/2));
+    align-items: center;
+    justify-items: center;
+    padding: 30px 20px;
+  }
+
+  .client__box-info {
+    width: 90%;
+    height: 450px;
+    justify-content: space-between;
+  }
+
+  .btn-redirect {
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+
+  .btn-redirect:hover {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .client__container-top {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .client__container-main {
+    display: grid;
+    grid-template-columns: repeat(3, calc(100%/3));
+    justify-content: space-between;
+  }
+
+  .client__box-info {
+    width: 90%;
+    height: 450px;
+    justify-content: space-around;
+  }
+
+  .btn-redirect {
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+
+  .btn-redirect:hover {
+    opacity: 1;
+  }
+}

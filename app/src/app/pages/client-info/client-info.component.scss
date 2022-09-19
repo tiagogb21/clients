@@ -1,13 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  background: rgb(240, 240, 240);
-  padding: 30px 0;
 }
 
-.enterprise__container-top {
+.client-info__container {
+  width: 100vw;
   display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  background: rgb(240, 240, 240);
+  padding: 30px 0;
+  gap: 30px;
+}
+
+.client-info__box {
+  width: 82vw;
+  height: 30vh;
+  border: 1px solid rgb(180, 180, 180);
+  padding: 20px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+}
+
+.client-info__box article {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.client-info__box h3 {
+  color:rgb(63, 81, 181);
+}
+
+.client-info__box p {
+  width: 100%;
+}
+
+.client-info__box p {
+  font-weight: 600;
+}
+
+.client-info__box p span {
+  font-weight: 600;
+}
+
+.client-info__box img {
+  width: 100px;
+}
+
+@media screen and (min-width: 500px) {
+  .client-info__container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .client-info__box {
+    width: 35vw;
+  }
 }
 
 .enterprise__container-main {
@@ -17,16 +76,12 @@
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
-}
 
-.enterprise__container-main h1 {
-  width: 60%;
-  text-align: center;
-  color: rgb(63, 81, 181);
+  background: rgb(240, 240, 240);
 }
 
 .enterprise__box-info {
-  width: 200px;
+  width: 80%;
 
   border: 1px solid rgb(180, 180, 180);
   border-radius: 10px;
@@ -40,37 +95,15 @@
   background: #ffffff;
 }
 
-.enterprise__box-info p:first-child {
-  width: 80%;
-  text-align: right;
-  font-weight: 600;
-  margin: 0;
-}
-
-.enterprise__box-info h3 {
-  width: 80%;
-  text-align: center;
-  margin: 0;
-  color:rgb(63, 81, 181);
-}
-
 .enterprise__box-info img {
   width: 150px;
 }
 
-.enterprise__box-info p {
-  width: 80%;
-  margin: 0;
-}
-
-.enterprise__box-info p span {
-  font-weight: 600;
-}
-
 @media screen and (min-width: 500px) {
-  .enterprise__container-top {
+  .client-info__container {
     width: 100%;
     flex-direction: row;
+    justify-content: center;
   }
 
   .enterprise__container-main {
@@ -82,17 +115,11 @@
   }
 
   .enterprise__box-info {
-    height: 300px;
     justify-content: space-between;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .enterprise__container-top {
-    width: 100%;
-    flex-direction: row;
-  }
-
   .enterprise__container-main {
     display: grid;
     grid-template-columns: repeat(3, calc(100%/3));
@@ -100,7 +127,6 @@
   }
 
   .enterprise__box-info {
-    height: 250px;
     justify-content: space-between;
   }
 }
