@@ -1,0 +1,21 @@
+<section class="container">
+  <section
+    class="enterprise__container-top"
+  >
+    <app-input-search (valueChange)="chooseBySearchChange($event)"></app-input-search>
+  </section>
+  <section
+    class="enterprise__container-main"
+  >
+    <article
+      *ngFor="let enterprise of enterprises"
+      class="enterprise__box-info"
+    >
+      <p>id: {{ enterprise.id }}</p>
+      <h3>{{ enterprise.name }}</h3>
+      <img [src]="enterprise.image" alt="enterprise.name" onerror="this.src=''">
+      <p> <span>Empresa</span>: {{ enterprise.clientName }}</p>
+      <p> <span>Imóveis</span>: {{ enterprise.realties }}</p>
+    </article>
+  </section>
+</section>

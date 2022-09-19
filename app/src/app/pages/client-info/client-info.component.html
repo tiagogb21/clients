@@ -1,0 +1,29 @@
+<section class="container">
+  <app-input-search (valueChange)="chooseBySearchChange($event)"></app-input-search>
+
+  <section class="client-info__container">
+    <article
+      class="client-info__box"
+      *ngIf="client"
+    >
+      <img [src]="client.image_src" alt="client.name" onerror="this.src=''">
+      <article>
+        <h3>{{ client.name }}</h3>
+        <p>id: {{ client.id }}</p>
+      </article>
+    </article>
+    <app-total-info [totalInfo]="totalInfo"></app-total-info>
+  </section>
+  <section
+    class="enterprise__container-main"
+  >
+    <article
+      *ngFor="let enterprise of enterprises"
+      class="enterprise__box-info"
+    >
+      <p>{{ enterprise.id }}</p>
+      <img [src]="enterprise.image" alt="enterprise.name" onerror="this.src=''">
+      <p>{{ enterprise.name }}</p>
+    </article>
+  </section>
+</section>
