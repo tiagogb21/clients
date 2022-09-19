@@ -18,7 +18,7 @@
       <p> <span>Empreendimentos</span>: {{ client.enterprises }}</p>
       <p> <span>Imóveis</span>: {{ client.totalRealties }}</p>
       <a
-        routerLink="`/client/${ client.id }`"
+        [routerLink]="['/client', client.id]"
         class="btn-redirect"
       >
         Mais Detalhes

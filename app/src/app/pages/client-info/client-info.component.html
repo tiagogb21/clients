@@ -1,6 +1,4 @@
 <section class="container">
-  <app-input-search (valueChange)="chooseBySearchChange($event)"></app-input-search>
-
   <section class="client-info__container">
     <article
       class="client-info__box"
@@ -8,10 +6,13 @@
     >
       <img [src]="client.image_src" alt="client.name" onerror="this.src=''">
       <article>
-        <h3>{{ client.name }}</h3>
         <p>id: {{ client.id }}</p>
+        <h3>{{ client.name }}</h3>
       </article>
     </article>
+  </section>
+  <section class="client-info__container">
+    <app-input-search (valueChange)="chooseBySearchChange($event)"></app-input-search>
     <app-total-info [totalInfo]="totalInfo"></app-total-info>
   </section>
   <section
