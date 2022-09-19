@@ -1,0 +1,20 @@
+<article
+  class="client__box-total"
+  *ngIf="totalInfo"
+>
+  <h3>Informação - Números Totais:</h3>
+  <p
+    *ngIf="totalInfo.totalClients"
+  >
+    <span class="total-info-span">Clientes:</span>
+    <strong>{{ totalInfo.totalClients }} </strong>
+  </p>
+  <p>
+    <span class="total-info-span">Empreendimentos:</span>
+    <strong>{{ totalInfo.totalEnterprises }}</strong>
+  </p>
+  <p>
+    <span class="total-info-span">Imóveis:</span>
+    <strong>{{ totalInfo.totalRealties }}</strong>
+  </p>
+</article>
