@@ -16,6 +16,12 @@ class EnterprisesService {
       .includes(name.toLowerCase()));
     return filterEnterprisesByName;
   }
+
+  getEnterpriseFilterByName(name) {
+    const allEnterprises = this.getAllEnterprises();
+    return allEnterprises.filter((enterprise) => enterprise
+      .name.toLowerCase().includes(name.toLowerCase()));
+  }
 }
 
 module.exports = EnterprisesService;

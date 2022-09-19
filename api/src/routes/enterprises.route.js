@@ -8,5 +8,6 @@ const enterprisesController = new EnterprisesController();
 
 /** Get general totals */
 routes.get('/', enterprisesController.getAllEnterprises);
+routes.get('/name/:name', enterprisesController.getEnterpriseFilterByName);
 
 module.exports = routes;

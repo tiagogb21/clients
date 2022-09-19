@@ -17,9 +17,19 @@ class EnterprisesController {
 
   getEnterpriseByName = async (req, res) => {
     try {
-      console.log(1);
       const { id, name } = req.params;
       const enterprises = await this._service.getEnterpriseByName(id, name);
+      return res.status(200).json(enterprises);
+    } catch (err) {
+      const error = new GenericError(err)
+      return res.status(error.getStatus()).json(error.getMessage());
+    }
+  }
+
+  getEnterpriseFilterByName = async (req, res) => {
+    try {
+      const { name } = req.params;
+      const enterprises = await this._service.getEnterpriseFilterByName(name);
       return res.status(200).json(enterprises);
     } catch (err) {
       const error = new GenericError(err)
