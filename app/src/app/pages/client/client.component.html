@@ -1,0 +1,28 @@
+<section>
+  <section
+    class="client__container-top"
+  >
+    <app-input-search (valueChange)="chooseBySearchChange($event)"></app-input-search>
+    <app-total-info [totalInfo]="totalInfo"></app-total-info>
+  </section>
+  <section
+    class="client__container-main"
+  >
+    <article
+      *ngFor="let client of clients"
+      class="client__box-info"
+    >
+      <p>id: {{ client.id }}</p>
+      <h3>{{ client.name }}</h3>
+      <img [src]="client.image_src" alt="client.name" onerror="this.src=''">
+      <p> <span>Empreendimentos</span>: {{ client.enterprises }}</p>
+      <p> <span>Imóveis</span>: {{ client.totalRealties }}</p>
+      <a
+        routerLink="`/client/${ client.id }`"
+        class="btn-redirect"
+      >
+        Mais Detalhes
+      </a>
+    </article>
+  </section>
+</section>

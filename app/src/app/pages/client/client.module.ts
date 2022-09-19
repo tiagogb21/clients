@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { ClientComponent } from './client.component';
 import { ClientService } from 'src/app/services/client.service';
+import { InputSearchModule } from '../../components/input-search/input-search.module';
+import { TotalInfoModule } from 'src/app/components/total-info/total-info.module';
 
 export const ClientRoutes: Routes = [
   {
@@ -12,6 +15,15 @@ export const ClientRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ClientComponent]
+  declarations: [ClientComponent],
+
+  providers: [ClientService],
+
+  imports: [
+    CommonModule,
+    InputSearchModule,
+    TotalInfoModule,
+  ],
 })
+
 export class ClientModule {}
